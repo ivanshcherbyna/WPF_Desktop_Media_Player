@@ -1,0 +1,24 @@
+﻿<Window x:Class="WPF_MediaPlayer.EqualizerWimdow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="EqualizerWimdow" Height="170" Width="306"
+        ResizeMode="NoResize">
+    <Grid Opacity="0.6" Margin="0,0,-6,-2">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF0063FF" Offset="0"/>
+                <GradientStop Color="#FFF1E2E2" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.Effect>
+            <DropShadowEffect/>
+        </Grid.Effect>
+        <Label Content="Volume" HorizontalAlignment="Left" Margin="11,13,0,0" VerticalAlignment="Top"/>
+        <Label Content="Balance" HorizontalAlignment="Left" Margin="11,54,0,0" VerticalAlignment="Top"/>
+        <Label Content="Speed" HorizontalAlignment="Left" Margin="11,94,0,0" VerticalAlignment="Top"/>
+        <Slider Name="sldVolume" HorizontalAlignment="Left" Margin="62,15,0,0" VerticalAlignment="Top" Width="211" Value="0.5" Maximum="1" ValueChanged="sldVolume_ValueChanged"/>
+        <Slider Name="sldBalance" HorizontalAlignment="Left" Margin="62,56,0,0" VerticalAlignment="Top" Width="211" Value="0" Maximum="1" Minimum="-1" ValueChanged="sldBalance_ValueChanged"/>
+        <Slider Name="sldSpeed" HorizontalAlignment="Left" Margin="62,96,0,0" VerticalAlignment="Top" Width="211" Value="1" Maximum="4" ValueChanged="sldSpeed_ValueChanged"/>
+
+    </Grid>
+</Window>
